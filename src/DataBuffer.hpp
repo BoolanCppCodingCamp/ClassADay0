@@ -12,6 +12,8 @@ public:
     CDataBuffer(const std::string& name, A* data, unsigned int length);
     CDataBuffer(const CDataBuffer& db);
     CDataBuffer& operator= (const CDataBuffer& db);
+    CDataBuffer(CDataBuffer&& db) noexcept;
+    CDataBuffer& operator= (CDataBuffer&& db) noexcept;
     virtual ~CDataBuffer();
 
     A* GetExtraData();
